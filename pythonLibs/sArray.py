@@ -56,4 +56,5 @@ def _amountOfDimensions(array):
 		i += 1
 	
 
-biggestArrayElement(sArray(4, 4, 5), 1, 2)
+# Example usage:
+# biggestArrayElement(sArray(4, 4, 5), 1, 2)
