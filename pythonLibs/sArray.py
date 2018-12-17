@@ -38,4 +38,5 @@ def _amountOfDimensions(array):
 			copy = copy[0]
 		except:
 			return i
+
 		i += 1
