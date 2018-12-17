@@ -26,34 +26,16 @@ def sArray(*dimensions):
 def _addLayer(array, layerCount):
 	return [deepcopy(array) for n in range(layerCount)]
 
-# Returns the biggest array element for a given amount
-# of dimensions: For an array [X][Y][Z] the correct calls
-# of this function are (with bAE being a abbreviation of 
-# biggestArrayElement):
-# bAE(array, x), bAE(array, x, y), bAE(array, x, y, z)
-# with 0 <= x < X, 0 <= y < Y, 0 <= z < Z
-# bAE(array, 1, 2) will then return the biggest array element
-# of Z elements: Of all elements array[1][2][0 -> Z-1]
-#def biggestArrayElement(array, *dimensions):
-#	copy = array
-#	for i in dimensions:
-#		copy = copy[i]
-#	#TODO: loop recursively over all (remaining) dimensions, take the global max, and return the indices in a list
-#	print _amountOfDimensions(copy)
-	
 # Returns the amount of dimensions a list/array has.
 # As a sArray can have an infinite amount of
 # dimensions, this can be used to loop through all of
 # them.
 def _amountOfDimensions(array):
 	i = 0
-	copy = array
+	copy = array # just keeping it clean
 	while 1:
 		try:
 			copy = copy[0]
 		except:
 			return i
 		i += 1
-	
-
-biggestArrayElement(sArray(4, 4, 5), 1, 2)

@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 import sys
 
 if not ((2,7,0) <= sys.version_info[:3] < (3,0,0)):
