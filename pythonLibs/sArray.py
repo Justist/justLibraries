@@ -24,7 +24,7 @@ def sArray(*dimensions):
 # the same reference, which would result in multiple
 # sublists being changed together when not issued so.
 def _addLayer(array, layerCount):
-	return [deepcopy(array) for n in range(layerCount)]
+	return [deepcopy(array) for _ in range(layerCount)]
 
 # Returns the amount of dimensions a list/array has.
 # As a sArray can have an infinite amount of
